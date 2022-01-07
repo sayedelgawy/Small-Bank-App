@@ -1,2 +1,3 @@
 F:\My field\Learn_Pathes\Coding\Courses\Route\Conslole Learn\Bank_system\Source\Debug\Source.exe
 F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\Debug\Source.exe
+F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\Debug\Source.exe

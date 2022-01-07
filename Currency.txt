@@ -1,3 +1,4 @@
 currency_8006;Eg-pound;200
 currency_8007;Eg-pound;200
 currency_8008;Am-Dolar;200
+currency_8009;EGY-Pound;17.5

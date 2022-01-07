@@ -1,26 +1,2 @@
-﻿  Admin.cpp
-  Client.cpp
-  Currency.cpp
-  DataSource.cpp
-  Employee.cpp
-  FileManager.cpp
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\FileManager.cpp(86,31): warning C4018: '<': signed/unsigned mismatch
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\FileManager.cpp(131,31): warning C4018: '<': signed/unsigned mismatch
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\FileManager.cpp(177,31): warning C4018: '<': signed/unsigned mismatch
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\FileManager.cpp(219,31): warning C4018: '<': signed/unsigned mismatch
-  Loading.cpp
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\Loading.cpp(24,35): warning C4018: '<': signed/unsigned mismatch
-  Person.cpp
-  Source.cpp
-  Validation.cpp
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\Validation.cpp(7,20): warning C4018: '<': signed/unsigned mismatch
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\Validation.cpp(23,20): warning C4018: '<=': signed/unsigned mismatch
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\Validation.cpp(23,43): warning C4018: '>=': signed/unsigned mismatch
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\Validation.cpp(46,21): warning C4018: '<': signed/unsigned mismatch
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\Validation.cpp(75,21): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\FileManager.cpp(156): warning C4715: 'FileManager::getAllEmployee': not all control paths return a value
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\FileManager.cpp(245): warning C4715: 'FileManager::getAllCurrency': not all control paths return a value
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\FileManager.cpp(112): warning C4715: 'FileManager::getAllClients': not all control paths return a value
-F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\FileManager.cpp(200): warning C4715: 'FileManager::getAllAdmins': not all control paths return a value
-  Source.vcxproj -> F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\BankSystem\Debug\Source.exe
+﻿  Source.cpp
+  Source.vcxproj -> F:\My field\Learn_Pathes\Coding\Courses\Route\Toturial i made\BankSystem\Debug\Source.exe
