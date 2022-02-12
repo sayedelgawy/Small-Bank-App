@@ -3,11 +3,6 @@
 #include<string>
 #include <fstream>
 #include <iostream>
-#include"Validation.h"
-#include "Client.h"
-#include "Person.h"
-
-
 using namespace std;
 
 class Loading
@@ -21,7 +16,6 @@ public:
 
 	static void writeNewId(string filename,int newId);
 
-	
 
 };
 

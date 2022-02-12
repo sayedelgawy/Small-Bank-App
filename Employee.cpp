@@ -87,6 +87,13 @@ void Employee::displayInfo() {
 
 }
 
+void Employee::displayInfoForQuery() {
+	cout << "Id is: " << idOfEmployee << endl;
+	cout << "Name is: " << Person::getName() << endl;
+	cout << "Password is: " << password << endl;
+	cout << "Salary is: " << salary << endl;
+}
+
 
 //valid employee method
 bool Employee::isValid() {

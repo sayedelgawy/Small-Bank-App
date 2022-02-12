@@ -1,9 +1,8 @@
 #pragma once
 #include "Person.h"
-#include "Currency.h"
 #include "Loading.h"
 
-class Currency;//declaring this to avoid copmosition error (unkown override specifier error)
+
 
 class Client:public Person
 {
@@ -15,7 +14,7 @@ private:
 	string idOfClient;
 	string pinCode;
 	double balance;
-	Currency* currency;
+	
 	
 	
 
@@ -33,6 +32,7 @@ public:
 	//Setters methods
 	void setPinCode(string pinCode);
 	void setBalance(double balance);
+	
 
 	//Getters methods
 	string getPinCode();
@@ -41,9 +41,17 @@ public:
 
 	//Diplay info method
 	void displayInfo();
+	void displayInfoForQuery();
 
 	//valid client method
 	bool isValid();
+
+	//banking methods
+	void withdraw(double amount);
+
+	void deposit(double amount);
+
+	void transferTo(double amount,Client &client);
 
 
 };

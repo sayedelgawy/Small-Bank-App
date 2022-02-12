@@ -40,6 +40,7 @@ public:
 	//Diplay info method
 	virtual void displayInfo();
 
+	void displayInfoForQuery();
 
 
 	//valid employee method

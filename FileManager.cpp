@@ -1,5 +1,5 @@
 #include "FileManager.h"
-#include "Loading.h"
+
 
 
 //Adding methods
@@ -49,19 +49,6 @@ void FileManager::addAdmin(Admin admin) {
     }
     
 }
-void FileManager::addCurrency(Currency currency) {
-    if (currency.isValid())
-    {
-        ofstream file;
-        file.open("Currency.txt", ios::app);
-        file << currency.getId() << ";" << currency.getName() << ";" << currency.getValue() << "\n";
-        file.close();
-    }
-    else {
-
-        cout << "Invalid Inputs\n";
-    }
-}
 
 
 //Getters Methods
@@ -102,12 +89,12 @@ vector<Client> FileManager::getAllClients() {
             arrayOfClients.push_back(newClient);
         }
 
-        file.close();
-
-
-        return arrayOfClients;
-
+       
+ 
     }
+
+    file.close();
+    return arrayOfClients;
    
 }
 vector<Employee> FileManager::getAllEmployee() {
@@ -149,14 +136,13 @@ vector<Employee> FileManager::getAllEmployee() {
 
         file.close();
 
-
-        return arrayOfEmployee;
-
     }
+
+    return arrayOfEmployee;
 }
-vector<Employee*> FileManager::getAllAdmins() {
+vector<Admin> FileManager::getAllAdmins() {
     
-    vector<Employee*> arrayOfAdmins;
+    vector<Admin> arrayOfAdmins;
 
     
 
@@ -186,63 +172,19 @@ vector<Employee*> FileManager::getAllAdmins() {
             }
             objectData.push_back(currentInfo);
 
-
-            arrayOfAdmins.push_back(new Admin(objectData[0], objectData[1], objectData[2], stod(objectData[3])));
+            Admin newAdmin(objectData[0], objectData[1], objectData[2], stod(objectData[3]));
+            
+            arrayOfAdmins.push_back(newAdmin);
 
         }
 
         file.close();
 
 
-        return arrayOfAdmins;
-
     }
+    return arrayOfAdmins;
 }
-vector<Currency> FileManager::getAllCurrency() {
 
-    vector<Currency> arrayOfCurrencies;
-
-    ifstream file;
-
-    file.open("Currency.txt", ios::in);
-
-    if (file.is_open())
-    {
-
-        string line;
-
-        while (getline(file, line)) {
-
-            vector<string> objectData;
-
-            string currentInfo = "";
-            for (int i = 0; i < line.size(); i++) {
-                if (line[i] == ';') {
-                    objectData.push_back(currentInfo);
-                    currentInfo = "";
-                }
-                else {
-
-                    currentInfo += line[i];
-                }
-            }
-            objectData.push_back(currentInfo);
-
-
-
-            Currency newCurrency(objectData[0], objectData[1],stod(objectData[2]));
-
-            arrayOfCurrencies.push_back(newCurrency);
-        }
-
-        file.close();
-
-
-        return arrayOfCurrencies;
-
-    }
-
-}
 
 
 //Deleting Methods
@@ -267,16 +209,96 @@ void FileManager::removeAllAdmins() {
     file.close();
 
 }
-void FileManager::removeAllCurrencies() {
-
-    ofstream file;
-    file.open("Currency.txt", ofstream::out | ofstream::trunc);
-    file.close();
-
- }
 
 
+//save all vectors
+void FileManager::saveAllClients(vector<Client> &arrayOfClients) {
+
+   
+    
+
+    
+
+    ofstream fileTxt;
+
+    fileTxt.open("Client.txt", ios::out);
+
+    if (fileTxt.is_open())
+    {
+        for (int i = 0; i < arrayOfClients.size(); i++)
+        {
 
 
+            fileTxt << arrayOfClients[i].getId() << ";" << arrayOfClients[i].getName() << ";" << arrayOfClients[i].getPinCode() << ";" << arrayOfClients[i].getBalance() << "\n";
+
+          
+
+        }
+    }
+    else {
+
+        cout << "Internal Error File Coudn't Open\n";
+    }
+   
+
+    fileTxt.close();
+
+    
+}
+
+void FileManager::saveAllEmployee(vector<Employee>& arrayOfEmployee) {
+
+    ofstream fileTxt;
+
+    fileTxt.open("Employee.txt", ios::out);
+
+    if (fileTxt.is_open())
+    {
+        for (int i = 0; i < arrayOfEmployee.size(); i++)
+        {
+
+
+            fileTxt << arrayOfEmployee[i].getId() << ";" << arrayOfEmployee[i].getName() << ";" << arrayOfEmployee[i].getPassword() << ";" << arrayOfEmployee[i].getSalary() << "\n";
+
+
+
+        }
+    }
+    else {
+
+        cout << "Internal Error File Coudn't Open\n";
+    }
+
+
+    fileTxt.close();
+}
+
+
+void FileManager::saveAllAdmins(vector<Admin>& arrayOfAdmins) {
+
+    ofstream fileTxt;
+
+    fileTxt.open("Admin.txt", ios::out);
+
+    if (fileTxt.is_open())
+    {
+        for (int i = 0; i < arrayOfAdmins.size(); i++)
+        {
+
+
+            fileTxt << arrayOfAdmins[i].getId() << ";" << arrayOfAdmins[i].getName() << ";" << arrayOfAdmins[i].getPassword() << ";" << arrayOfAdmins[i].getSalary() << "\n";
+
+
+
+        }
+    }
+    else {
+
+        cout << "Internal Error File Coudn't Open\n";
+    }
+
+
+    fileTxt.close();
+}
 
 

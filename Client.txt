@@ -1,7 +1,3 @@
-client_1041;sayed;1234;5000
-client_1042;sayed;1234;2000
-client_1043;sayed;1234;2000
-client_1044;sayed;1234;2000
-client_1045;sayed;1234;2000
-client_1046;sayed;1234;2000
-client_1047;sayed;1234;2000
+client_1041;mohamed;1234;4930
+client_1042;sayed;1234;5050
+client_1043;ahmed;1234;5000

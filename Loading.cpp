@@ -1,7 +1,7 @@
 #include "Loading.h"
 
 
-////This class is For Loading old written ids in text id's files to keep id's unique////
+////This class is For Loading ////
 
 vector<int> Loading::loadTheIdsOfAllpersons(string fileName) {//read Id.txt file and return vector arrayOfIds
 
@@ -62,7 +62,7 @@ void Loading::writeNewId(string filename, int newId) {//writing id's in the Ids.
 
     ofstream id_file;
 
-    id_file.open(filename, ios::app);
+    id_file.open(filename, ios::out);
 
     if (id_file.is_open()) {
 
@@ -73,5 +73,4 @@ void Loading::writeNewId(string filename, int newId) {//writing id's in the Ids.
    
     
 }
-
 

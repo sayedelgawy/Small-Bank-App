@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 
+
 class FileManager : public DataSource
 {
 
@@ -12,22 +13,28 @@ public:
 	void addClient(Client client);
 	void addEmployee(Employee employee);
 	void addAdmin(Admin admin);
-	void addCurrency(Currency currency);
+
 
 
 	//Getters Methods
 	vector<Client> getAllClients();
 	vector<Employee> getAllEmployee();
-	vector<Employee*> getAllAdmins();
-	vector<Currency> getAllCurrency();
+	vector<Admin> getAllAdmins();
 
 
-	////Deleting Methods
+	//Deleting Methods
 	void removeAllClients();
 	void removeAllEmployee();
 	void removeAllAdmins();
-	void removeAllCurrencies();
+	
 
+
+	//save all vectors
+	void saveAllClients(vector<Client> &arrayOfClients);
+
+	void saveAllEmployee(vector<Employee> &arrayOfEmployee);
+
+	void saveAllAdmins(vector<Admin> &arrayOfAdmins);
 
 	
 

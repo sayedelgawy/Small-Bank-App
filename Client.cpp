@@ -12,7 +12,6 @@ Client::Client() {
 	this->balance = 0;
 
 }
-
 //using it when reading from database or text file to vector clients
 Client::Client(string idOfClient, string name , string pinCode, double balance) {
 
@@ -23,6 +22,7 @@ Client::Client(string idOfClient, string name , string pinCode, double balance) 
 	
 
 }
+
 
 //instanceClient Method-->the only method to instance unique clients 
 void Client::instanceClient(string name, string pinCode, double balance) {
@@ -98,6 +98,12 @@ void Client::displayInfo() {
 	cout << "Your Pin Code is: " << pinCode << endl;
 	cout << "Your Balance is: " << balance << endl;
 }
+void Client::displayInfoForQuery() {
+	cout << "Id is: " << idOfClient << endl;
+	cout << "Name is: " << Person::getName() << endl;
+	cout << "Pin Code is: " << pinCode << endl;
+	cout << "Balance is: " << balance << endl;
+}
 
 
 //valid client method
@@ -116,3 +122,52 @@ bool Client::isValid() {
 	}
 
 }
+
+
+//banking methods
+void Client::withdraw(double amount) {
+
+	if (amount <= this->balance && !(Validation::isNegative(amount))) {
+
+		this->balance -= amount;
+	}
+	else if(amount <= this->balance && Validation::isNegative(amount)) {
+
+		Validation::errorValidationMessage("pls enter positive value");
+	}
+	else {
+
+		Validation::errorValidationMessage("Low Balance");
+	}
+
+};
+
+void Client::deposit(double amount) {
+
+	if (!(Validation::isNegative(amount)))
+	{
+		this->balance += amount;
+	}
+	else {
+
+		Validation::errorValidationMessage("pls enter positive value");
+	}
+};
+
+void Client::transferTo(double amount, Client &client) {
+
+	if (amount <= this->balance && !(Validation::isNegative(amount))) {
+
+		client.balance += amount;
+		this->balance -= amount;
+	}
+	else if (amount <= this->balance && Validation::isNegative(amount)) {
+
+		Validation::errorValidationMessage("pls enter positive value");
+	}
+	else {
+
+		Validation::errorValidationMessage("Low Balance");
+	}
+
+};
