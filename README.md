@@ -1,4 +1,5 @@
-#SmallBankSystem
+#BankSystem
+
 Small Bank System Exercise 
 
 Bank system app which contains 3 modules
