@@ -1,10 +1,9 @@
-#BankSystem
+# small Bank system app
 
-Small Bank System Exercise 
+small Bank system app which contains 2 modules
 
-Bank system app which contains 3 modules
+#Client Module
 
-Client Module
 Each client contains: client name, id,pin code balance.
 Client can login to the system using id and pin code
 Client can deposit amount of money 
@@ -13,7 +12,8 @@ Client can check his balance
 Client can transfer money to another client
 
 
-Employee Module
+#Employee Module
+
 Each employee contains: Employee name, id ,password, salary
 Employee can login to the system by id and password
 Employee can add new Client
