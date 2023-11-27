@@ -1,8 +1,8 @@
 # small Bank system app
 
-small Bank system app which contains 2 modules
+small Bank system app which contains 3 modules
 
-#Client Module
+#Client Module:
 
 Each client contains: client name, id,pin code balance.
 Client can login to the system using id and pin code
@@ -12,7 +12,7 @@ Client can check his balance
 Client can transfer money to another client
 
 
-#Employee Module
+#Employee Module:
 
 Each employee contains: Employee name, id ,password, salary
 Employee can login to the system by id and password
@@ -23,7 +23,8 @@ Employee can edit info of client
 Employee can display his info
 
 
-Admin Module
+#Admin Module:
+
 Admin will be the same like Employee
 Admin can add new Employee
 Admin can search for Employee
