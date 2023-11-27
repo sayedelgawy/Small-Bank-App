@@ -1,4 +1,4 @@
-# small Bank system app
+# small bank system app
 
 small Bank system app which contains 3 modules
 
